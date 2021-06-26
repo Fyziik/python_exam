@@ -15,3 +15,30 @@ print(f'Via next(): {next(my_gen_expression)}')
 
 for item in my_gen_expression:
     print(item)
+
+
+class my_iterator:
+
+    def __init__(self, max=0):
+        self.max = max
+
+    def __iter__(self):
+        self.n = 1
+        return self
+
+    def __next__(self):
+        if self.n <= self.max:
+            self.n += 1
+            return self.n - 1
+        else:
+            raise StopIteration
+
+numbers = my_iterator(5)
+
+i = iter(numbers)
+
+print(f'Via next(): {next(i)}')
+print(f'Via next(): {next(i)}')
+
+for num in i:
+    print(num)
