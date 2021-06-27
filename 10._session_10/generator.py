@@ -14,3 +14,5 @@ print(f'Manual looping count: {counter.__next__()}')
 
 for i in counter:
     print(f'Remainder via automatic looping: {i}')
+
+

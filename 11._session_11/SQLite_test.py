@@ -11,3 +11,5 @@ with connect('testfiles/school.db') as conn:
         print(i)
 
     cur.execute('DROP TABLE students')
+
+    

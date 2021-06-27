@@ -23,6 +23,8 @@ class Person:
 
 example = Person('Andreas', 25)
 
+example.name = 'Jesper'
+
 print(example)
 print(example.public)
 print(example.name)

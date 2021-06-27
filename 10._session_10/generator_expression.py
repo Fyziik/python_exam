@@ -7,14 +7,8 @@ my_list = [x for x in [1, 2, 3, 4, 5]]
 #Same list as a generator expression
 my_gen_expression = (x for x in [1, 2, 3, 4, 5])
 
-print(my_list)
-print(my_gen_expression)
-
-print(f'Via next(): {next(my_gen_expression)}')
-print(f'Via next(): {next(my_gen_expression)}')
-
 for item in my_gen_expression:
-    print(item)
+    print(f'Via gen exp: {item}')
 
 
 class my_iterator:
@@ -37,8 +31,5 @@ numbers = my_iterator(5)
 
 i = iter(numbers)
 
-print(f'Via next(): {next(i)}')
-print(f'Via next(): {next(i)}')
-
 for num in i:
-    print(num)
+    print(f'Via for loop: {num}')  
