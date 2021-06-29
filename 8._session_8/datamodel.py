@@ -49,7 +49,7 @@ added = first_person + second_person.name
 
 print(added)
 
-class indexing:
+class Card:
 
     def __init__(self):
         self.cards = ['A', 'K', '4', '7']
@@ -57,7 +57,17 @@ class indexing:
     def __getitem__(self, key):
         return self.cards[key]
 
+    def __add__(self, element):
+        self.cards.append(element)
 
-deck = indexing()
+    def __str__(self):
+        return f'{self.cards}'
 
+
+
+
+deck = Card()
 print(deck[2])
+
+deck + 2
+print(deck)
